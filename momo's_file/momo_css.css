@@ -1,0 +1,345 @@
+/* General styles */
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    outline: none;
+    border: none;
+    transition: .2s linear;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    /*display: flex;  Use flex to center the content vertically */
+    /* Ensure header, main, and footer are stacked vertically */
+    min-height: 100vh; /* Make body height full viewport */
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    background: #312727;
+    height: 80px;
+    width: 100%;
+    max-width: 1600px;
+}
+
+label.logo{
+    color: rgb(146, 10, 10);
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+
+}
+nav ul li a{
+    color: rgb(223, 178, 178);
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+
+}
+
+a.active, a:hover{
+    color:rgb(191, 6, 6);
+    transition: 0.5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: transparent;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+  
+}
+
+#check{
+    display: none;
+
+}
+
+@media (max-width:952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+
+    }
+    nav ul li a {
+        font-size: 16px;
+
+    }
+}
+@media (max-width:600px)
+{
+    .checkbtn{
+        display: block;
+
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 60vh;
+        background: transparent;
+        top:80px;
+        left: 0;
+        transition: all .5s;
+        text-align: center;
+        align-items: center;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover , a.active{
+        background: none;
+        color: red;
+    }
+    #check:checked~ul{
+        left: 0;
+    }
+}
+
+
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+
+
+
+/* Footer styles */
+#footer {
+    background-color: #171515;
+    color: rgb(173, 98, 98);
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+#footer .org h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#footer h2 {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-item a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-item a:hover img {
+    transform: scale(1.1);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navlist ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main.container > div {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main h1 {
+        font-size: 20px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        font-size: 14px;
+    }
+
+    button.main-btn.contact-btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .contact-heading {
+        font-size: 12px;
+    }
+
+    #footer h1 {
+        font-size: 20px;
+    }
+
+    #footer h2 {
+        font-size: 14px;
+    }
+
+    .social-item a img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+/*intro*/
+
+.wrapper{
+    margin: 100px auto;
+    width: 80%;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+}
+img{
+   
+    max-width: 250px;
+    float: left;
+    border: 3px solid rgb(20, 17, 17);
+    border-radius: 10px;
+    margin-right: 15px;
+}
+.txtbox{
+    color: rgb(105, 4, 16);
+}
+.txtbox h2{
+    font-size: 42px;
+}
+.txtbox p{
+    font-size: 16px;
+    color: rgb(3, 52, 58);
+}
+
+/*container*/
+
+.container{
+    background: #fafafa;
+    padding: 15px 9%;
+    padding-bottom: 100px;
+}
+
+.container .heading{
+    text-align: center;
+    padding-bottom: 15px;
+    color: rgb(2, 29, 53);
+    text-shadow: 0 5px 10px rgba(0,0,0,.2);
+    font-size: 40px;
+    
+}
+
+.container .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.container .box-container .box{
+    box-shadow: 0 5px 10px rgba(90, 3, 3, 0.2);
+    border-radius: 5px;
+    background: rgb(245, 229, 229);
+    text-align: center;
+    padding: 30px 20px;
+
+}
+.container .box-container .box img{
+    height: 120px;
+    width: 100%;
+    float:none
+    
+}
+.container .box-container .box h3{
+    color: #400e04;
+    font-size: 22px;
+    padding: 10px 0;
+
+
+}
+
+.container .box-container .box p{
+    color: rgb(3, 1, 21);
+    font-size: 15px;
+    line-height: 1.8;
+} 
+.container .box-container .box .btn{
+    margin-top: 10px;
+    display: inline-block;
+    background: #2d0137;
+    font-size: 17px;
+    border-radius: 5px;
+    padding: 8px;
+}
+.container .box-container .box .btn:hover{
+    letter-spacing: 1px;
+}
+.container .box-container .box:hover{
+    box-shadow: 0 10px 15px rgba(0,0,0,0.4);
+    transform: scale(1.02);
+}
+
+@media (max-width:768px){
+    .container{
+        padding: 20px;
+    }
+    
+}
+
+
+.enroll{
+    
+   
+    background: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.enroll .btn{
+    margin-top: 10px;
+    display: inline-block;
+    background: #b95a23;
+    font-size: 17px;
+    border-radius: 5px;
+    padding: 8px;
+    
+    
+}
+
